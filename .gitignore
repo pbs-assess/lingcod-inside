@@ -17,10 +17,8 @@ resdoc.tex
 *.knit.md
 
 # Data
-data/
 *.csv
 *.rda
-*.rds
 *.xls
 *.xlsx
 
