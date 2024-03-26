@@ -36,32 +36,4 @@ Download the latest release of [Stock Synthesis 3.0](https://github.com/nmfs-ost
 r4ss::get_ss3_exe(dir = "~/ss3")
 ```
 
-## Data
 
-```{mermaid} 
-flowchart LR
-  subgraph lingcod-inside/
-    _targets.R(["_targets.R"])
-    subgraph data-raw/
-      gfcatch-lingcod-4b.R(["gfcatch-lingcod-4b.R"])
-      irec-lingcod-4b.R(["irec-lingcod-4b.R"])
-      creel-lingcod-4b.R(["creel-lingcod-4b.R"])
-      fsc-lingcod-4b.R(["fsc-lingcod-4b.R"])
-      tba.R(["tba.R"])
-    end
-    subgraph data/
-      gfcatch-lingcod-4b.rds
-      irec-lingcod-4b.rds
-      creel-lingcod-4b.rds
-      fsc-lingcod-4b.rds
-      tba.rds
-    end
-  end
-  data/-->_targets.R
-  GFCatch---gfcatch-lingcod-4b.R-->gfcatch-lingcod-4b.rds
-  iREC---irec-lingcod-4b.R-->irec-lingcod-4b.rds
-  Creel---creel-lingcod-4b.R-->creel-lingcod-4b.rds
-  FSC---fsc-lingcod-4b.R-->fsc-lingcod-4b.rds
-  TBA---tba.R-->tba.rds
-
-```
