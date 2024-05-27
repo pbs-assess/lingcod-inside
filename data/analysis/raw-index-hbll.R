@@ -1,13 +1,6 @@
-# Setup ------------------------------------------------------------------------
 
-library(dplyr)
 # remotes::install_github("pbs-assess/gfdata")
-library(gfdata)
 source("R/utils.R")
-
-# Raw --------------------------------------------------------------------------
-
-## Inside HBLL hook data -------------------------------------------------------
 
 # Read HBLL survey hook data from GFBio for area 4B
 index_hbll_hooks <- gfdata::get_ll_hook_data(
@@ -19,8 +12,6 @@ index_hbll_hooks <- gfdata::get_ll_hook_data(
 tibble::view(index_hbll_hooks)
 # Write hooks
 write_data(index_hbll_hooks, path = "data/raw")
-
-## Inside HBLL survey sets -----------------------------------------------------
 
 # Read HBLL survey set data from GFBio for area 4B
 index_hbll_sets <- gfdata::get_survey_sets(
@@ -35,15 +26,3 @@ index_hbll_sets <- gfdata::get_survey_sets(
 tibble::view(index_hbll_sets)
 # Write 
 write_data(index_hbll_sets, path = "data/raw")
-
-# Generated --------------------------------------------------------------------
-
-
-
-# SS3 --------------------------------------------------------------------------
-
-
-
-
-
-# End --------------------------------------------------------------------------
