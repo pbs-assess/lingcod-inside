@@ -25,6 +25,7 @@ resdoc.tex
 # Emacs
 *.org#
 *~*
+org/
 
 # Latex
 *.aux
